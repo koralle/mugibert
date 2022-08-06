@@ -1,0 +1,17 @@
+*
+
+# Source
+!src
+!src/*
+!src/**/*.ts
+!src/**/*.tsx
+
+# static index.html
+!index.html
+
+# Storybook
+!.storybook
+!.storybook/*
+!.storybook/**/*.html
+!.storybook/**/*.js
+

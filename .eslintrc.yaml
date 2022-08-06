@@ -1,0 +1,42 @@
+root: true
+extends:
+  - eslint:recommended
+  - plugin:import/recommended
+  - plugin:promise/recommended
+  - plugin:import/typescript
+  - plugin:@typescript-eslint/recommended
+  - plugin:@typescript-eslint/recommended-requiring-type-checking
+  - plugin:react/recommended
+  - plugin:react-hooks/recommended
+  - plugin:storybook/recommended
+  - plugin:jest/recommended
+  - plugin:jest/style
+  - prettier
+parser: '@typescript-eslint/parser'
+parserOptions:
+  ecmaFeatures:
+    jsx: true
+  tsconfigRootDir: .
+  project: ./tsconfig.json
+  sourceType: module
+env:
+  jest/globals: true
+  node: true
+  browser: true
+  es2021: true
+plugins:
+  - import
+  - promise
+  - '@typescript-eslint'
+  - vitest
+rules:
+  jest/require-top-level-describe:
+    - error
+  jest/consistent-test-it:
+    - error
+    - fn: it
+ignorePatterns:
+  - 'vite.config.ts'
+settings:
+  react:
+    version: detect
